@@ -12,11 +12,11 @@ const defaultFormFields = {
 }
 
 const SignUpForm = () => {
-    const [formFields, setFormsFields] = useState(defaultFormFields);
+    const [formFields, setFormFields] = useState(defaultFormFields);
     const { displayName, email, password, confirmPassword } = formFields;
 
     const resetFormFields = () => {
-        setFormsFields(defaultFormFields);
+        setFormFields(defaultFormFields);
     }
 
     const handleSubmit = async (e) => {
@@ -49,7 +49,7 @@ const SignUpForm = () => {
     const handleChange = (event) => {
         const { name, value } = event.target;
 
-        setFormsFields({ ...formFields, [name]: value })
+        setFormFields({ ...formFields, [name]: value })
     }
 
     return (
@@ -57,7 +57,7 @@ const SignUpForm = () => {
             <h2>Don't Have an Account?</h2>
             <span>Sign up with your email and password</span>
 
-            <form onSubmit={(e) => { handleSubmit(e) }}>
+            <form onSubmit={(e) => { handleSubmit(e)}}>
                 <FormInput label="Display Name" type="text" required onChange={handleChange} name="displayName" value={displayName} />
 
                 <FormInput label="E-mail" type="email" required onChange={handleChange} name="email" value={email} />
