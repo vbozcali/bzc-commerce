@@ -7,12 +7,12 @@ import { signOutUser } from "../../utils/firebase/firebase.utils";
 const Navigation = () => {
     const { currentUser, setCurrentUser } = useContext(UserContext);
 
-    const signOutHandler = async () => {
+    const signOutHandler = async () => {
         await signOutUser();
 
         setCurrentUser(null);
     }
-    
+
     return (
         <Fragment>
             <div className="navigation">
@@ -43,3 +43,4 @@ const Navigation = () => {
 }
 
 export default Navigation;
+
