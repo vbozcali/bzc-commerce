@@ -57,7 +57,7 @@ const SignUpForm = () => {
             <h2>Don't Have an Account?</h2>
             <span>Sign up with your email and password</span>
 
-            <form onSubmit={(e) => { handleSubmit(e)}}>
+            <form onSubmit={(e) => { handleSubmit(e) }}>
                 <FormInput label="Display Name" type="text" required onChange={handleChange} name="displayName" value={displayName} />
 
                 <FormInput label="E-mail" type="email" required onChange={handleChange} name="email" value={email} />
