@@ -5,7 +5,7 @@ import { UserContext } from "../../context/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-import { CartContext } from "../../context/cart.contex";
+import { CartContext } from "../../context/cart.context";
 
 const Navigation = () => {
     const { currentUser, setCurrentUser } = useContext(UserContext);
@@ -25,6 +25,8 @@ const Navigation = () => {
                 </Link>
 
                 <div className="nav-links-container">
+                    {currentUser && <span style={{ fontWeight: 'bold' }}>{currentUser.displayName}</span>}
+
                     <Link className="nav-link" to="/shop">
                         SHOP
                     </Link>
