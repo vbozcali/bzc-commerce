@@ -1,7 +1,6 @@
 import { createSelector } from "reselect";
 
 const selectCategoryReducer = (state) => {
-    console.log('selector 1 fired');
     return state.categories;
 };
 

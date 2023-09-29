@@ -3,7 +3,7 @@ import logger from 'redux-logger';
 
 import { rootReducer } from './root-reducer';
 
-// our custom middleware example
+/*
 const loggerMiddleware = (store) => (next) => (action) => {
     if(!action.type) {
         return next(action);
@@ -16,9 +16,9 @@ const loggerMiddleware = (store) => (next) => (action) => {
     next(action);
 
     console.log('next state: ', store.getState());
-}
+} */
 
-const middlewares = [loggerMiddleware];
+const middlewares = [logger];
 
 const composedEnhancers = compose(applyMiddleware(...middlewares));
 
