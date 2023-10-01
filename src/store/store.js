@@ -4,13 +4,17 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { rootReducer } from './root-reducer';
 import cartTransform from './transforms';
+import thunk from 'redux-thunk';
 
-const middlewares = [process.env.NODE_ENV !== 'production' && logger].filter(Boolean);
+const middlewares = [
+    process.env.NODE_ENV !== 'production' && logger,
+    thunk
+].filter(Boolean);
 
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist: ['user'],
+    whitelist: ['cart'],
     transforms: [
         cartTransform
     ]
