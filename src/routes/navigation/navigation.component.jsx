@@ -1,6 +1,5 @@
 import { Fragment } from "react"
 import { Outlet } from "react-router-dom"
-import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import { LogoContainer, NavLinks, NavLink, NavigationContainer } from "./navigation.styles";
@@ -8,13 +7,17 @@ import { AppLogo } from "../../components/app-logo/app-logo.component";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { useDispatch } from "react-redux";
+import { signOutStart } from "../../store/user/user.action";
 
 const Navigation = () => {
     const currentUser = useSelector(selectCurrentUser);
     const isCartOpen = useSelector(selectIsCartOpen);
 
-    const signOutHandler = async () => {
-        await signOutUser();
+    const dispatch = useDispatch();
+
+    const signOutHandler = () => {
+        dispatch(signOutStart());
     }
 
     return (
@@ -25,7 +28,7 @@ const Navigation = () => {
                 </LogoContainer>
 
                 <NavLinks>
-                    {currentUser && <span style={{ fontWeight: 'bold' }}>{currentUser.email}</span>}
+                    {currentUser && <span style={{ fontWeight: 'bold', paddingTop: 9 }}>{currentUser.displayName}</span>}
 
                     <NavLink to="/shop">
                         SHOP
