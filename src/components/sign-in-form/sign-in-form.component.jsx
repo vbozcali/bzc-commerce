@@ -8,7 +8,8 @@ import { emailSignInStart, googleSignInStart } from "../../store/user/user.actio
 
 const defaultFormFields = {
     'email': '',
-    'password': ''
+    'password': '',
+    'test': ''
 }
 
 const SignInForm = () => {
