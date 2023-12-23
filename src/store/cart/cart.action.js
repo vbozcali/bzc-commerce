@@ -29,6 +29,11 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
     );
 }
 
+export const clearWholeCartItems = (cartItems) => {
+    cartItems = [];
+    return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, cartItems);
+}
+
 export const addItemToCart = (cartItems, productToAdd) => {
     const updatedItems = addCartItem(cartItems, productToAdd);
     return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, updatedItems);

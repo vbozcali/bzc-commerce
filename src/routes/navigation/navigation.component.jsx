@@ -34,6 +34,10 @@ const Navigation = () => {
                         SHOP
                     </NavLink>
 
+                    <NavLink to="/checkout">
+                        CHECKOUT
+                    </NavLink>
+
                     {currentUser ? (
                         <NavLink as="span" onClick={signOutHandler} className="nav-link">
                             SIGN OUT
@@ -56,4 +60,3 @@ const Navigation = () => {
 }
 
 export default Navigation;
-
