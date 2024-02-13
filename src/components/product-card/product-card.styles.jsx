@@ -5,13 +5,13 @@ export const Image = styled.img`
   height: 95%;
   object-fit: cover;
   margin-bottom: 5px;
+  border: 3px solid #000;
 `;
 
 export const ButtonContainer = styled.div`
-  width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 255px;
+  bottom: 50px;
   display: none;
 `;
 
@@ -34,12 +34,14 @@ export const Price = styled.span`
 `;
 
 export const ProductCardContainer = styled.div`
+  padding: 3px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 500px;
   align-items: center;
   position: relative;
+  border: 3px solid #000;
 
   &:hover {
     ${Image} {

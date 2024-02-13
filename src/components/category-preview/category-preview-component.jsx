@@ -8,7 +8,7 @@ const CategoryPreview = ({ title, products }) => {
         <PreviewContainer>
             <h2>
                 <Link to={title}>
-                    <Title>{title.toUpperCase()}</Title>
+                    <Title>{title.toUpperCase()} ⟶</Title>
                 </Link>
             </h2>
 

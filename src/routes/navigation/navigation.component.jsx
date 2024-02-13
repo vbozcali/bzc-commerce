@@ -23,12 +23,14 @@ const Navigation = () => {
     return (
         <Fragment>
             <NavigationContainer>
-                <LogoContainer to="">
-                    <AppLogo />
-                </LogoContainer>
+                <AppLogo />
 
                 <NavLinks>
                     {currentUser && <span style={{ fontWeight: 'bold', paddingTop: 9 }}>{currentUser.displayName}</span>}
+
+                    <NavLink to="/">
+                        HOME
+                    </NavLink>
 
                     <NavLink to="/shop">
                         SHOP

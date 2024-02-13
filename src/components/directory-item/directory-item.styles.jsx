@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 
 export const BackgroundImage = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   background-size: cover;
   background-position: center;
   background-image: ${({ imageurl }) => `url(${imageurl})`};
+  border: 3px solid black;
  `;
 
 export const Body = styled.div`
@@ -19,6 +20,9 @@ export const Body = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+  bottom: 0;
+  left: 0,
+  right: 0;
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
@@ -33,13 +37,14 @@ export const Body = styled.div`
 `;
 
 export const DirectoryItemContainer = styled.div`
+  position: relative;
   min-width: 30%;
-  height: 240px;
+  height: 540px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 3px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -63,3 +68,15 @@ export const DirectoryItemContainer = styled.div`
   &: last-child {
     margin-left: 7.5px;
 `;
+
+export const Title = styled.h2`
+    font-size: 38px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    backdrop-filter: blur(25px);
+    border: 3px solid black;
+    cursor: pointer;
+    font-style: italic;
+ `;
