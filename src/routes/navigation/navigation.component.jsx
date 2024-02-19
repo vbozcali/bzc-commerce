@@ -9,6 +9,7 @@ import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { useDispatch } from "react-redux";
 import { signOutStart } from "../../store/user/user.action";
+import Footer from "../../components/footer/footer.component";
 
 const Navigation = () => {
     const currentUser = useSelector(selectCurrentUser);
@@ -57,6 +58,8 @@ const Navigation = () => {
             </NavigationContainer>
 
             <Outlet />
+
+            <Footer />
         </Fragment>
     )
 }

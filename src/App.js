@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(checkUserSession());
-    
+
     /*
     const unsubscribe = onAuthStateChangedListener((user) => {
       if (user) {
