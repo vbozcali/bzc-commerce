@@ -5,7 +5,7 @@ export const AppLogo = () => {
     return (
         <LogoContainer>
             <Link to="/">
-                <img style={{ width: 300 }} src="https://i.ibb.co/C1MB7qD/bzc-commerce.png" alt="" />
+                <img style={{ width: 300 }} src="https://i.ibb.co/WsdZL4t/bzc-logo.png" alt="" />
             </Link>
         </LogoContainer>
     )
